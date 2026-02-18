@@ -213,6 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4cdc233f4c988c4eb56b2d0c36de4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  maxHealth: 10
+  currentHealth: 0
   currentState: 0
   moveSpeed: 3
   chaseSpeed: 4
@@ -1214,7 +1216,7 @@ Transform:
   m_GameObject: {fileID: 1317624352}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.99, z: 0}
+  m_LocalPosition: {x: 0, y: -1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1570,11 +1572,11 @@ MonoBehaviour:
   gunStamina: {fileID: 0}
   GunPoint: {fileID: 1508202653}
   GroundPoint: {fileID: 1317624353}
-  blastRadius: 3
+  blastRadius: 1.5
   deflectedBulletSpeed: 8
   deflectableLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
 --- !u!114 &1463049671
 MonoBehaviour:
   m_ObjectHideFlags: 0
