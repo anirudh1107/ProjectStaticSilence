@@ -12,6 +12,7 @@ public class FireJumpState : State
     {
         Debug.Log("Entered Fire Jump State");
         stateContext.playerManager.fireInput = 0;
+        stateContext.playerManager.rb.linearVelocity = new Vector2(stateContext.playerManager.rb.linearVelocity.x, 0); // Reset vertical velocity before applying jump force
         stateContext.playerManager.rb.AddForce(Vector2.up * stateContext.playerManager.fireJumpForce, ForceMode2D.Impulse);
         stateContext.playerManager.gunStamina.UseStamina(stateContext.playerManager.inAirGunStaminaCost);
     }

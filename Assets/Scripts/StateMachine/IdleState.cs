@@ -27,6 +27,7 @@ public class IdleState : State
             stateContext.playerManager.gunStamina.CanFire(stateContext.playerManager.groundGunStaminaCost))
         {
             Debug.Log("Fire");
+            stateContext.playerManager.FireSoundWave(stateContext.playerManager.GunPoint);
             stateContext.playerManager.fireInput = 0;
             stateContext.playerManager.gunStamina.UseStamina(stateContext.playerManager.groundGunStaminaCost);
         }

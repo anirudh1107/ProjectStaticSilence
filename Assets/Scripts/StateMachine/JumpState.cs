@@ -25,6 +25,7 @@ public class JumpState : State
             stateContext.playerManager.gunStamina.CanFire(stateContext.playerManager.inAirGunStaminaCost))
         {
             Debug.Log("Fire in the air!");
+            stateContext.playerManager.FireSoundWave(stateContext.playerManager.GroundPoint);
             stateContext.ChangeState(stateContext.playerManager.fireJumpState);
         }
     }

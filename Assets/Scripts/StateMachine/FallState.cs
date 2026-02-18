@@ -23,6 +23,7 @@ public class FallState : State
             stateContext.playerManager.gunStamina.CanFire(stateContext.playerManager.inAirGunStaminaCost))
         {
             Debug.Log("Fire in the air!");
+            stateContext.playerManager.FireSoundWave(stateContext.playerManager.GunPoint);
             stateContext.ChangeState(stateContext.playerManager.fireJumpState);
         }
         stateContext.playerManager.transform.Translate(stateContext.playerManager.movementInput * stateContext.playerManager.inAirSpeed * Time.deltaTime);
